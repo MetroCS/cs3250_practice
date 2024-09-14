@@ -7,19 +7,18 @@ assignees: ''
 
 ---
 
-- Add to the **title** of this issue to briefly identify the user story intent.
-- Modify the following template by replacing the place-holders in square brackets *[like this]* with meaningful content.
-- Then delete this preamble section.
-
-<hr />
+<!--
+- Add to the end of the "[REQUEST]" title of this issue to briefly identify the request.
+- Modify the following template by replacing the place-holders that look _[like this]_ with meaningful content.
+-->
 
 
 # User Story
 
 ## Story
-As a *[stakeholder type]* <br>
-I want *[desired outcome]* <br>
-so that *[rationale]*.
+As a _[stakeholder type]_ <br>
+I want _[desired outcome]_ <br>
+so that _[rationale]_.
 
 ## Acceptance Criteria
 _Choose either rules or scenarios and ensure they are verifiable from the perspective of the stakeholder_
@@ -38,8 +37,8 @@ _Choose either rules or scenarios and ensure they are verifiable from the perspe
 ## Supporting Information
 _[Relevant information, context, resources, references]_
 
-## Dependencies
-### Depends On
-_[Links to other issues on which this story depends]_
-### Dependents
-_[Links to other issues that depend on this story]_
+## Dependencies   
+### Depends On   
+_[Links to other issues on which this story depends]_  
+### Dependents  
+_[Links to other issues that depend on this story]_  

@@ -7,11 +7,11 @@ assignees: ''
 
 ---
 
-- Add to the **title** of this issue to briefly identify the request.
-- Modify the following template by replacing the place-holders in square brackets *[like this]*.
-- Then delete this preamble section.
-
-<hr />
+<!--
+- Add to the end of the "[REQUEST] " title of this issue to briefly identify the request.
+- Modify the following template by replacing the place-holders that look *[like this]*.
+- Select a checkbox by changing "[ ]" to "[X]".
+-->
 
 # Request
 
