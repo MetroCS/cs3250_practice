@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 <!--
-- Add to the end of the "[REQUEST]" title of this issue to briefly identify the request.
+- Add to the end of the "[USER STORY]" title of this issue to briefly identify the user story.
 - Modify the following template by replacing the place-holders that look _[like this]_ with meaningful content.
 -->
 
