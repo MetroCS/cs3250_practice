@@ -1,0 +1,48 @@
+<h1>Decision Support System</h1>
+<h2>Process and Computations</h2>
+<ul>
+<li>Each Factor has textual identification and a numeric rank.</li>
+<li>Each Alternative has a textual identification and a final score.</li>
+</ul>
+
+<h3>Decision-Maker Input:</h3>
+<ul>
+<li>Textual identification of each alternative</li>
+<li>Result: Collection of Alternatives</li>
+</ul>
+
+<h3>Decision-Maker Input:</h3>
+<ul>
+<li>Textual identification of each factor</li>
+<li>Result: Collection of Factors</li>
+</ul>
+
+<h3>Facilitated Input (using two-item relative quantification):</h3>
+<ul>
+<li>Relative rankings of factors</li>
+<li>Result: A relative ranking value associated with each Factor</li>
+</ul>
+
+<h3>Facilitated Input (using two-item relative quantification):</h3>
+<ul>
+<li>Relative cross-rankings of choices within each factor</li>
+<li>Result: A matrix of Choices x Factors with relative ranking values of Choices within each Factor</li>
+</ul>
+
+<h3>Normalization of Cross-Rankings within Each Factor:</h3>
+<ul>
+<li>Divide the value of each cross-ranking within a Factor by the sum of all cross-ranking values associated with that Factor.</li>
+</ul>
+
+<h3>Weighted Sum for Each Alternative:</h3>
+<ul>
+<li>Compute the weighted sum for each Alternative by adding together the normalized cross-rankings of the Alternative
+  each multiplied by the rank of its associated Factor.</li>
+</ul>
+
+<h3>Normalization of Final Scores:</h3>
+<ul>
+<li>Determine the maximum weighted sum over all Alternatives.</li>
+<li>Divide each Alternative’s weighted sum by that maximum weighted sum, yielding values between 0.0 and 1.0.</li>
+<li>Optionally, multiply the results by a pre-determined constant representing the “top choice” value (e.g., 100).</li>
+</ul>
