@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Decision Support Application - Overview</title>
+  </head>
+  <body>
+    <h1>Decision Support Application - Overview</h1>
+    <h2>Scope of the Product</h2>
+    <p>A Decision Support application that assists users in making decisions where:</p>
+    <ul>
+      <li>Users need to assess multiple alternatives for the decision.</li>
+      <li>Users must consider multiple factors (criteria) for the decision.</li>
+      <li>Each factor can have a different level of relative importance.</li>
+      <li>Psychometric scales facilitate capturing users’ preferences and priorities.</li>
+      <li>Mathematical models (e.g., weighted scoring, decision matrices, Analytical Hierarchy Process)
+        are useful in determining recommendations that reflect the users’ preferences.</li>
+    </ul>
+    <h2>Key Product Requirements</h2>
+    The Decision Support application must:
+    <ul>
+      <li>Allow users to define potential decision outcomes (e.g., different choices or alternatives).</li>
+      <li>Allow users to define multiple factors (e.g., cost, time, quality, personal preference) and assign relative weights.</li>
+      <li>Use a scoring model to compute the best decision based on the defined factors, weights, and psychometric assessments.</li>
+      <li>Display a summary of the relative ranking of all decision outcomes, including a final recommendation.</li>
+      <li>Provide a user-friendly experience with a clear and intuitive User Interface.</li>
+    </ul>
+    <h3>Functional Requirements</h3>
+    <h4>1. User Input</h4>
+    <ul>
+      <li>Provide an interface to define alternatives, decision criteria, and the relative weights of criteria.</li>
+      <li>Allow users to rate different alternatives according to each criterion.</li>
+    </ul>
+    <h4>2. Psychometric Principles</h4>
+    <ul>
+      <li>Implement a psychometric scale (e.g., AHP) to rate the relative importance of the factors.</li>
+      <li>Calculate decision priorities based on user preferences.</li>
+    </ul>
+    <h4>3. Mathematical Model</h4>
+    <ul>
+      <li>Integrate a decision-making algorithm (e.g., weighted decision matrix, AHP) to generate scores for each alternative.</li>
+      <li>Present a final ranking and decision recommendation based on the highest score(s).</li>
+    </ul>
+    <h3>Non-Functional Requirements</h3>
+    <h4>4. User Interface</h4>
+    <ul>
+      <li>Ensure the UI is simple, intuitive, and easy to navigate.</li>
+      <li>Display decisions and explanations clearly, using visual elements (e.g., charts, tables).</li>
+      <li>Provide clear error messages and helpful feedback for invalid inputs.</li>
+    </ul>
+    <h4>6. Platforms</h4>
+    <ul>
+      <li>Ensure the application is responsive and works across multiple devices.</li>
+    </ul>
+  </body>
+</html>
