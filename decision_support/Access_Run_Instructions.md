@@ -21,7 +21,7 @@ If not, please install them before proceeding.
 
 1. Run the Product Using Apache Ant
     - Once inside the decision_support directory, you will use Apache Ant to build and run the project.
-    Run the following command to execute the product:
+    Enter the following command to execute the product:
       `ant run`
     - The product should now start and be ready for use.
 
