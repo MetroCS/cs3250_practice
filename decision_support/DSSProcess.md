@@ -32,7 +32,9 @@ The product user provides pairwise comparisons of factors and alternatives. Inst
 
 ### Factor Comparison
 The user compares factors by assigning a relative value to each. For example, if Factor A is twice as important as Factor B, Factor A might receive a value of 10 and Factor B a value of 5. If Factor A is three times as important, the values could be 30 and 10, respectively.
-Alternative Comparison: For each factor, the user compares two alternatives and assigns relative values based on their performance in relation to that factor. For instance, if Alternative 1 performs three times better than Alternative 2 in a certain factor, their values might be 30 and 10, respectively.
+
+### Alternative Comparison
+For each factor, the user compares two alternatives and assigns relative values based on their performance in relation to that factor. For instance, if Alternative 1 performs three times better than Alternative 2 in a certain factor, their values might be 30 and 10, respectively.
 
 ### Processing
 The system calculates the overall ranking of factors and alternatives based on the relative values provided in the pairwise comparisons. Factor rankings are independent of the alternative rankings within each factor, allowing the user to treat these rankings separately.

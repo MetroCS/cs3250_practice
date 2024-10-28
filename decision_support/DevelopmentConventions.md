@@ -2,8 +2,8 @@
 
 This document describes intended and preferred conventions
 for development and maintenance of the Devision Support software product.
-* [Agile Principles](/DevelopmentConventions.md#Agile-Principles)
-* [Coding Convention Guide](/DevelopmentConventions.md#Coding-Convention-Guide)
+* [Agile Principles](#agile-principles)
+* [Coding Convention Guide](#coding-convention-guide)
 
  
 ## Agile Principles
@@ -46,7 +46,7 @@ Tests associated with successful implementation remains in the code base as _reg
 
 ### Style Convention Precedence and References
 
-#### [Project-specific conventions](/DevelopmentConventions.md#Project-Specific-Conventions) take precedence.
+#### [Project-specific conventions](#project-specific-conventions) take precedence.
 
 If no project-specific convention is applicable, use the [Sun Convention](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html) guide.
 
@@ -61,4 +61,4 @@ If a topic is not covered by any guides, use best judgement and consider opening
 ### Project-Specific Conventions
 
 - Multiple authors are indicated using multiple @author tags, one tag per line, one author per tag.
-- Many style conventions are embodied in [jp_checks.xml](/lib/jp_checks.xml) and [jp_suppressions.xml](/lib/jp_suppressions.xml) configuration files for [Checkstyle](https://checkstyle.sourceforge.io).
+- Style conventions are embodied in [jp_checks.xml](lib/jp_checks.xml) and [jp_suppressions.xml](lib/jp_suppressions.xml) configuration files for [Checkstyle](https://checkstyle.sourceforge.io).

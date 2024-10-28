@@ -14,14 +14,15 @@ assignees: ''
 
 
 # User Story
+Recognized stakeholder types: Decision-Maker, Maintainer
 
 ## Story
-As a _[stakeholder type]_ <br>
+As a _[stakeholder type]_  <br>
 I want _[desired outcome]_ <br>
 so that _[rationale]_.
 
 ## Acceptance Criteria
-_Choose either rules or scenarios and ensure they are verifiable from the perspective of the stakeholder_
+_Choose __either__ rules __or__ scenarios and __ensure they are verifiable__ from the perspective of the stakeholder_
 
 ### Rules
 * _[Rule 1]_
@@ -39,6 +40,6 @@ _[Relevant information, context, resources, references]_
 
 ## Dependencies   
 ### Depends On   
-_[Links to other issues on which this story depends]_  
+_[__Links__ to other issues on which this story depends]_  
 ### Dependents  
-_[Links to other issues that depend on this story]_  
+_[__Links__ to other issues that depend on this story]_  
