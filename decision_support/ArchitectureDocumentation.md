@@ -12,3 +12,5 @@ It describes:
 •	The logical architecture of software, the layers and top-level components
 •	The justification of technical choices made
 •	The traceability between the architecture and the system requirements.
+
+<!-- (add references) -->
