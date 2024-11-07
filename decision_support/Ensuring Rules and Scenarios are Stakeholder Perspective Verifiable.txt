@@ -1,0 +1,32 @@
+# Rules (Acceptance Criteria)
+
+### Defining Alternatives:
+- The interface must allow the Decision-Maker to create and name multiple alternatives that represent different choices for the decision they are facing.
+
+### Editing and Deleting Alternatives:
+- Users can modify or delete an alternative they’ve previously defined, giving flexibility to adjust the alternatives before beginning the evaluation process.
+
+### Alternative Review:
+- The interface should provide a summary view of all defined alternatives, ensuring users can review their input before proceeding to rate each one against the decision criteria.
+
+# Scenarios (Verifiable from Stakeholder Perspective)
+
+### Scenario 1: Creating an Alternative
+- Given: The Decision-Maker has accessed the "Define Alternatives" section.
+- When: They enter a name and optional description for an alternative.
+- Then: The system displays the alternative in a list, confirming its addition.
+
+### Scenario 2: Editing an Alternative
+- Given: The Decision-Maker has defined an alternative.
+- When: They choose to edit the alternative's name or description.
+- Then: The system updates the alternative in the list, reflecting the changes.
+
+### Scenario 3: Deleting an Alternative
+- Given: The Decision-Maker has a list of alternatives defined.
+- When: They select an alternative to delete.
+- Then: The system removes the alternative from the list and confirms the deletion.
+
+### Scenario 4: Reviewing Defined Alternatives
+- Given: The Decision-Maker has defined multiple alternatives.
+- When: They navigate to the summary view.
+- Then: The system displays all alternatives with names and descriptions, allowing a quick review before proceeding to rating.
