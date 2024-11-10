@@ -6,7 +6,7 @@
   <description>
     Build file for Decision Support product
   </description>
-  <property name="version" value="20241008_2"/>
+  <property name="version" value="20241110_2"/>
   <property name="author" value="Dr. Jody Paul"/>
   <property name="copyright" value="Copyright (c) Dr. Jody Paul"/>
   <property name="license"
@@ -19,6 +19,8 @@
   <property name="jar.dir"     value="${build.dir}/jar"/>
   <property name="lib.dir"     value="lib"/>
   <property name="reports.dir" location="reports"/>
+  <property name="doc"         location="doc"/>
+  <property name="api.url"     value="https://docs.oracle.com/en/java/javase/17/docs/api/" />
 
   <!-- Identify main class -->
   <property name="main-class"  value="metrocs.DSDriver"/>
@@ -42,6 +44,7 @@
           description="Clean up dynamically-created files and directories">
     <delete dir="${build.dir}"/>
     <delete dir="${reports.dir}"/>
+    <delete dir="${doc}"/>
   </target>
 
   <target name="compile">
@@ -122,6 +125,63 @@
       </fileset>
       <report format="frames" todir="${testreports.dir}"/>
     </junitreport>
+  </target>
+
+  <target name="doc"
+        description="generate API documentation" >
+    <!-- Create the documentation directory -->
+    <mkdir dir="${doc}"/>
+    <!-- Generate the API documentation for ${src.dir} in ${doc} -->
+    <javadoc access="public" destdir="${doc}" classpathref="classpath" encoding="cp1252"
+             additionalparam="-Xdoclint:none -html5">
+      <fileset dir="${src.dir}" casesensitive="yes" defaultexcludes="yes">
+        <filename name="**/*.java"/>
+        <exclude name="**/*Test.java"/>
+      </fileset>
+      <link href="${api.url}" />
+      <bottom>
+        <![CDATA[<a rel="license"
+                 href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+                 style="border-width:0;float:left;margin-right:5px;"
+                 src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
+                 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><i>Decision Support API</i></span> by
+                 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/MetroCS/cs3250_practice/tree/main/decision_support"
+                 property="cc:attributionName" rel="cc:attributionURL">MetroCS</a> is licensed under a
+                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+                 Attribution-ShareAlike 4.0 International License</a>.<br />Permissions beyond the scope of
+                 this license may be available at <a xmlns:cc="http://creativecommons.org/ns#"
+                 href="https://github.com/MetroCS/cs3250_practice/blob/main/decision_support/LICENSE"
+                 rel="cc:morePermissions">https://github.com/MetroCS/cs3250_practice/blob/main/decision_support/LICENSE</a>.]]>
+      </bottom>
+    </javadoc>
+  </target>
+
+  <target name="doc-private"
+        description="generate maintenance documentation" >
+    <!-- Create the documentation directory -->
+    <mkdir dir="${doc}"/>
+    <!-- Generate the API documentation for ${src.dir} in ${doc} -->
+    <javadoc access="private" destdir="${doc}" classpathref="classpath" encoding="cp1252"
+             additionalparam="-Xdoclint:none -html5">
+      <fileset dir="${src.dir}" casesensitive="yes" defaultexcludes="yes">
+        <filename name="**/*.java"/>
+      </fileset>
+      <link href="${api.url}" />
+      <bottom>
+        <![CDATA[<a rel="license"
+                 href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+                 style="border-width:0;float:left;margin-right:5px;"
+                 src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
+                 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><i>Decision Support API</i></span> by
+                 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/metroCS/cs3250_practice/blob/main/decision_support"
+                 property="cc:attributionName" rel="cc:attributionURL">MetroCS</a> is licensed under a
+                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+                 Attribution-ShareAlike 4.0 International License</a>.<br />Permissions beyond the scope of
+                 this license may be available at <a xmlns:cc="http://creativecommons.org/ns#"
+                 href="https://github.com/MetroCS/cs3250_practice/blob/main/decision_support/LICENSE"
+                 rel="cc:morePermissions">https://github.com/MetroCS/cs3250_practice/blob/main/decision_support/LICENSE</a>.]]>
+      </bottom>
+    </javadoc>
   </target>
 
 </project>
