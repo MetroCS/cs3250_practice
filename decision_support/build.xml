@@ -25,6 +25,10 @@
   <!-- Identify main class -->
   <property name="main-class"  value="metrocs.DSDriver"/>
 
+  <!-- pmd directories -->
+  <property name="pmd.dir" location="${lib.dir}/pmd"/>
+  <property name="pmd.reports.dir" location="${reports.dir}/pmd"/>
+
   <!-- Establish classpaths for production and testing. -->
   <path id="classpath">
     <fileset dir="${lib.dir}" includes="**/*.jar"/>
@@ -38,7 +42,7 @@
 
   <target name="all"
           description="Clean, Build, Check, Test, and Run"
-          depends="clean, compile, checkstyle, test, run"/>
+          depends="clean, compile, checkstyle, test, pmd, run"/>
 
   <target name="clean"
           description="Clean up dynamically-created files and directories">
@@ -102,7 +106,45 @@
     <xslt  in="${checkstyle.reports.dir}/checkstyle_report.xml"
            out="${checkstyle.reports.dir}/checkstyle_report.html"
            style="${checkstyle.xsl}" />
-  </target> 
+  </target>
+
+  <!-- PMD and CPD -->
+  <path id="pmd.classpath">
+    <fileset dir="${pmd.dir}">
+      <include name="*.jar"/>
+      <include name="lib/**/*.jar"/>
+    </fileset>
+    <fileset dir="${lib.dir}" includes="**/*.jar"/>
+  </path>
+
+  <target name="pmdInit">
+    <mkdir dir="${pmd.reports.dir}"/>
+  </target>
+  <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath"/>
+  <target name="pmd" description="process source with PMD" depends="pmdInit">
+    <pmd shortFilenames="true">
+      <sourceLanguage name="java" version="1.8"/>
+      <ruleset>java-basic</ruleset>
+      <ruleset>java-braces</ruleset>
+      <ruleset>java-codesize</ruleset>
+      <ruleset>java-design</ruleset>
+      <ruleset>java-empty</ruleset>
+      <ruleset>java-imports</ruleset>
+      <ruleset>java-unusedcode</ruleset>
+      <!-- <ruleset>rulesets/java/design.xml</ruleset> -->
+      <!-- <ruleset>java-comments</ruleset> -->
+      <!-- <ruleset>java-naming</ruleset> -->
+      <formatter type="html" toFile="${pmd.reports.dir}/pmd_report.html" toConsole="true">
+        <param name="linkPrefix" value="http://pmd.sourceforge.net/xref/"/>
+        <param name="linePrefix" value=".line"/>
+      </formatter>
+      <fileset dir="${src.dir}">
+        <include name="**/*.java"/>
+      </fileset>
+    </pmd>
+    <echo message="${color:cyan,bold}PMD report is at ${pmd.reports.dir}/pmd_report.html${color:reset}" />
+  </target>
+  <!-- PMD and CPD END -->
 
 
   <target name="test" description="Run tests" depends="unitTest"/>

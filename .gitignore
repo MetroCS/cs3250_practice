@@ -7,6 +7,13 @@
 # BlueJ files
 *.ctxt
 
+#IntelliJ Files
+/.idea
+*.iml
+
+#PMD eports
+pmd_report.html
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
