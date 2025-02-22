@@ -1,0 +1,2 @@
+This is the first line of a sample text file.
+This file is available to be modified for exploration of version control.
